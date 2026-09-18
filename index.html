@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boeurn Tharith — Graphic Designer</title>
+  <meta name="description" content="Portfolio of Boeurn Tharith, a graphic designer based in Phnom Penh, Cambodia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#101225;
+      --bg2:#171a35;
+      --card:#7b55e8;
+      --card2:#6540ce;
+      --text:#fff;
+      --muted:#d8d5ec;
+      --line:rgba(255,255,255,.25);
+      --accent:#9b7aff;
+      --cyan:#62e4f4;
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--text);
+      font-family:Inter,system-ui,sans-serif;
+      background:
+        radial-gradient(circle at 88% 6%, rgba(58,196,255,.22), transparent 24%),
+        radial-gradient(circle at 15% 35%, rgba(125,74,238,.16), transparent 30%),
+        var(--bg);
+      overflow-x:hidden;
+    }
+    body:before, body:after{
+      content:"";
+      position:fixed;
+      width:420px;height:420px;
+      border:1px solid rgba(149,111,255,.22);
+      border-radius:50%;
+      pointer-events:none;
+      z-index:-1;
+    }
+    body:before{right:-250px;top:140px}
+    body:after{left:-270px;bottom:-260px}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(var(--max), calc(100% - 48px));margin:auto}
+    header{padding:26px 0;position:relative;z-index:5}
+    nav{display:flex;align-items:center;justify-content:space-between}
+    .brand{font-family:Poppins,sans-serif;font-size:21px;font-weight:800;letter-spacing:-.5px}
+    .brand span{color:var(--accent)}
+    .navlinks{display:flex;gap:28px;color:#d7d5e8;font-size:14px}
+    .navlinks a:hover{color:#fff}
+    .hero{min-height:720px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:70px;padding:55px 0 80px}
+    .eyebrow{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#b8abff;font-weight:700;margin-bottom:18px}
+    h1{font-family:Poppins,sans-serif;font-size:clamp(52px,7vw,92px);line-height:.94;margin:0 0 26px;letter-spacing:-4px}
+    h1 .grad{background:linear-gradient(90deg,#fff 15%,#a98cff 75%,#5fe2f4);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{max-width:590px;color:var(--muted);font-size:17px;line-height:1.8;margin:0 0 32px}
+    .buttons{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{padding:13px 20px;border-radius:13px;border:1px solid var(--line);font-weight:700;font-size:14px;transition:.2s}
+    .btn.primary{background:linear-gradient(135deg,#8c63ef,#6240c9);border:0;box-shadow:0 12px 30px rgba(103,63,210,.28)}
+    .btn:hover{transform:translateY(-2px)}
+    .portrait{
+      width:min(390px,90%);aspect-ratio:.82;margin-left:auto;position:relative;
+      border-radius:46% 46% 30% 30% / 35% 35% 24% 24%;
+      background:
+        radial-gradient(circle at 50% 35%, rgba(255,255,255,.16), transparent 18%),
+        linear-gradient(145deg,#4b3a98,#59cde0 115%);
+      box-shadow:0 35px 80px rgba(0,0,0,.35);
+      display:flex;align-items:center;justify-content:center;
+      overflow:visible;
+    }
+    .portrait:before{
+      content:"";position:absolute;inset:-14px 18px 8px -10px;border:1.5px solid #9470ff;
+      border-radius:46% 46% 30% 30% / 35% 35% 24% 24%;transform:rotate(-5deg)
+    }
+    .portrait:after{
+      content:"";position:absolute;inset:0;border-radius:inherit;background:rgba(16,18,37,.12)
+    }
+    .portrait img{width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:inherit;position:relative;z-index:1}
+    .floating{position:absolute;background:rgba(19,20,40,.78);backdrop-filter:blur(12px);border:1px solid var(--line);padding:12px 15px;border-radius:14px;font-size:12px;color:#ddd9ef;box-shadow:0 15px 40px rgba(0,0,0,.2)}
+    .floating.one{top:13%;right:-40px}.floating.two{bottom:15%;left:-55px}
+    section{padding:45px 0 95px}
+    .section-title{font-family:Poppins,sans-serif;font-size:34px;margin:0 0 28px;letter-spacing:-1px}
+    .section-title span{color:#a88dff}
+    .info-card{
+      background:
+        radial-gradient(circle at 85% 0%,rgba(175,137,255,.65),transparent 32%),
+        linear-gradient(135deg,var(--card),var(--card2));
+      border-radius:38px;padding:48px;box-shadow:0 30px 80px rgba(55,31,130,.28);position:relative;overflow:hidden
+    }
+    .info-card:after{content:"";position:absolute;width:380px;height:380px;border:1px solid rgba(255,255,255,.16);border-radius:50%;right:-170px;bottom:-230px}
+    .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+    .info h3{font-family:Poppins,sans-serif;font-size:17px;margin:0 0 12px}
+    .info p{margin:0;color:#f0edff;font-size:14px;line-height:1.8}
+    .personal-details{margin-top:30px;padding-top:26px;border-top:1px solid rgba(255,255,255,.18)}
+    .personal-details ul{display:grid;grid-template-columns:repeat(2,1fr);gap:12px 28px;margin:0;padding:0;list-style:none}
+    .personal-details li{color:#f0edff;font-size:14px;line-height:1.6}
+    .personal-details strong{color:#fff}
+    .skills{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .skill{
+      background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);
+      padding:22px;border-radius:20px
+    }
+    .skill-head{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+    .skill-head h3{margin:0}
+    .skill-logo{width:36px;height:36px;flex:0 0 36px;border-radius:10px;display:grid;place-items:center}
+    .skill-logo.figma{background:#fff}
+    .skill-logo.photoshop{background:#001e36;color:#31a8ff;font-family:Poppins,sans-serif;font-size:13px;font-weight:800;letter-spacing:-.5px;border:1px solid #31a8ff}
+    .skill h3{margin:0 0 8px;font-size:17px}.skill p{margin:0;color:#ddd8f4;font-size:14px;line-height:1.6}
+    .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .project-link{display:block}
+    .project{
+      min-height:250px;border-radius:26px;padding:26px;display:flex;flex-direction:column;justify-content:flex-end;
+      background:linear-gradient(145deg,#27234d,#13152c);border:1px solid rgba(255,255,255,.09);overflow:hidden;position:relative
+    }
+    .project:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:rgba(117,83,232,.55);filter:blur(4px);top:-70px;right:-50px}
+    .project:nth-child(2):before{background:rgba(58,205,225,.35)}
+    .project:nth-child(3):before{background:rgba(239,126,196,.3)}
+    .project small,.project h3,.project p{position:relative;z-index:1}.project small{color:#a999ff;font-weight:700}.project h3{margin:8px 0 7px;font-size:20px}.project p{margin:0;color:#c6c3d7;font-size:13px}
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .contact-card{background:#171932;border:1px solid rgba(255,255,255,.1);padding:28px;border-radius:24px}
+    .contact-card h3{margin:0 0 10px;font-size:16px}.contact-card p{margin:0;color:#c6c3d7;line-height:1.7}
+    footer{padding:28px 0 45px;color:#8f8ca5;font-size:12px;border-top:1px solid rgba(255,255,255,.08)}
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr;text-align:center;min-height:auto}.hero p{margin-left:auto;margin-right:auto}
+      .buttons{justify-content:center}.portrait{margin:25px auto 0}
+      .grid4{grid-template-columns:1fr 1fr}.project-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:620px){
+      .wrap{width:min(100% - 30px,var(--max))}.navlinks{display:none}
+      h1{font-size:52px;letter-spacing:-2.5px}.hero{padding-top:35px}
+      .info-card{padding:28px;border-radius:28px}.grid4,.skills,.project-grid,.contact,.personal-details ul{grid-template-columns:1fr}
+      section{padding-bottom:65px}.floating.one{right:-10px}.floating.two{left:-10px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <div class="brand">Boeurn <span>Tharith</span></div>
+        <div class="navlinks">
+          <a href="#about">About</a><a href="#skills">Skills</a><a href="#work">Work</a><a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <div>
+        <div class="eyebrow">Phnom Penh, Cambodia</div>
+        <h1>Hello, I'm<br><span class="grad">Tharith.</span></h1>
+        <p>I am currently studying Fintech at ACLEDA University of Business. I have completed an Associate Degree in Information Technology (IT) at Build Bright University. I am passionate about research and innovation. I enjoy coding, creating new ideas, and designing visuals. I am always eager to learn new skills and improve my knowledge in technology and digital solutions.
+
+        <div class="buttons">
+          <a class="btn primary" href="#work">View My Work</a>
+          <a class="btn" href="#contact">Contact Me</a>
+        </div>
+      </div>
+      <div class="portrait" aria-label="Profile placeholder for Boeurn Tharith">
+        <img src="image.png" alt="Portrait of Boeurn Tharith" />
+       
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <h2 class="section-title">About <span>me</span></h2>
+        <div class="info-card">
+          <div class="grid4">
+            <div class="info"><h3>Name</h3><p>Boeurn Tharith</p></div>
+            <div class="info"><h3>Location</h3><p>Phnom Penh, Cambodia</p></div>
+            <div class="info"><h3>School</h3><p>ACLEDA University of Business</p></div>
+            <div class="info"><h3>Major</h3><p>Fintech</p></div>
+          </div>
+          <div class="personal-details">
+            <ul>
+              <li><strong>Gender:</strong> Male</li>
+              <li><strong>Nationality:</strong> Cambodia</li>
+              <li><strong>Health:</strong> Good</li>
+              <li><strong>Date of Birth:</strong> 13 March 2000</li>
+              <li><strong>Place of Birth:</strong> Prey Veng Province</li>
+            <li><strong>Height:</strong>1.70cm</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <h2 class="section-title">My <span>skills</span></h2>
+        <div class="skills">
+          <div class="skill">
+            <div class="skill-head">
+              <div class="skill-logo figma" aria-label="Figma logo">
+                <svg viewBox="0 0 32 32" aria-hidden="true">
+                  <path fill="#F24E1E" d="M11 2h5v9h-5a4.5 4.5 0 1 1 0-9Z"/>
+                  <path fill="#FF7262" d="M16 2h5a4.5 4.5 0 0 1 0 9h-5V2Z"/>
+                  <path fill="#A259FF" d="M11 11h5v9h-5a4.5 4.5 0 1 1 0-9Z"/>
+                  <path fill="#1ABCFE" d="M16 11h5a4.5 4.5 0 0 1 0 9h-5v-9Z"/>
+                  <path fill="#0ACF83" d="M11 20h5v5.5a4.5 4.5 0 1 1-5-5.5Z"/>
+                </svg>
+              </div>
+              <h3>Figma</h3>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill-head">
+              <div class="skill-logo photoshop" aria-label="Adobe Photoshop logo">Ps</div>
+              <h3>Adobe Photoshop</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="wrap">
+        <h2 class="section-title">My<span> Works</span></h2>
+        <div class="project-grid">
+          <a class="project-link" href="https://www.figma.com/design/2BdrbPc6aT0VPZRuaWDoex/Digital-Credit-Life-Insurance?node-id=0-1&t=XjNdcSpnXvELNXqq-1" target="_blank" rel="noopener noreferrer">
+            <article class="project"><small>· UX/UI DESIGN</small><h3>Digital Credit Life Insurance</h3><p>A focused digital insurance experience designed in Figma.</p></article>
+          </a>
+          <a class="project-link" href="https://www.figma.com/design/MylrL5HpKcDPksBvpTwmL4/ACLEDA?node-id=0-1&t=BaGVoWygT3O3xLBF-1" target="_blank" rel="noopener noreferrer">
+            <article class="project"><small>· UX/UI DESIGN</small><h3>ACLEDA School App</h3><p>Modern interface concepts designed in Figma.</p></article>
+          </a>
+          <a class="project-link" href="https://www.figma.com/design/f4t4ywo5BhllpVOyloM5Gc/Attends?t=BaGVoWygT3O3xLBF-1" target="_blank" rel="noopener noreferrer">
+            <article class="project"><small>· UX/UI DESIGN</small><h3>HR Attendance App</h3><p>Digital product screens and interaction concepts.</p></article>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <h2 class="section-title">Let's <span>connect</span></h2>
+        <div class="contact">
+          <div class="contact-card"><h3>Telegram</h3><p><a href="https://t.me/BoeurnTharith" target="_blank" rel="noopener noreferrer">011 322 949</a></p></div>
+            <div class="contact-card"><h3>Email</h3><p><a href="mailto:boeurntharith@gmail.com">boeurntharith@gmail.com</a></p></div>            
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
